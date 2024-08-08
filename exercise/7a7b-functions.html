@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+      <style>
+    </style>
+  </head>
+  <body>      
+    <script>
+      // function greet(name){
+      //   if(!name){
+      //     console.log('Hello There!');
+      //   }else{
+      //     console.log(`Hello ${name}`);
+      //   }
+      // }
+      // greet();
+
+      function convertToFahrenheit(celsius){
+         celsius = (celsius * 9/5) + 32;
+         return console.log(`${celsius}F`);
+      }
+      
+      function convertToCelsius(fahrenheit){
+        fahrenheit = (fahrenheit - 32) * 5/9;
+        return console.log(`${fahrenheit}C`);
+      }
+
+      function convertTemperature(degrees, unit){
+        if(unit === 'C'){
+          convertToFahrenheit(degrees);
+        }else if(unit === 'F'){
+          convertToCelsius(degrees)
+        }
+      }
+
+      // console.log(convertToFahrenheit(25));
+      // console.log(convertToCelsius(86));
+      convertTemperature(25,'C');
+      convertTemperature(86, 'F')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array and loops</title>
+      <style>
+      </style>
+  </head>
+  <body>
+    <script>
+      removeEgg(['egg','ham','apple']);
+
+      function removeEgg(foods){
+        const result = [];
+          for(let i = 0; i < foods.length; i++){
+            const foodStr = foods[i];
+            if(foodStr === 'egg'){
+              continue;
+            }
+
+              result.push(foodStr);
+            
+          }
+          console.log(result);
+      }
+
+    </script>
+  </body>
+</html>

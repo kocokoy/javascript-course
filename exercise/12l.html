@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <script>
+
+
+      // countPositive.forEach((value) => {
+      //   ctr = 0;
+      //   if(value >= 0 ){
+      //     ctr++;
+      //   }
+      //   return ctr;
+      // });
+
+      let countPositive = (nums) => {
+        let ctr = 0;
+        nums.forEach((value) => {
+          if(value >= 0){
+           ctr++;
+          }
+        });
+        console.log(ctr);
+      }
+
+      countPositive([1, -3, 5]);
+      countPositive([-2, 3, -5, 7, 10]);
+    </script>
+  </body>
+</html>

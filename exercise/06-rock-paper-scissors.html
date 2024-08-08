@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+      <style>
+    </style>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+   const randomNumber = Math.ceil(Math.random() * 3);
+   let computerMove = '';
+   let result = '';
+    if(randomNumber === 1){
+       computerMove = 'Rock';
+        result = 'Rock' && 'It\'s a Tie';
+    }else if(randomNumber === 2){
+       computerMove = 'Paper';
+        result = 'Paper' && 'You lose';
+    }else{
+       computerMove = 'Scissors';
+        result = 'Scissors' && 'You Win';
+    }
+    console.log(`You picked Rock, Computer picked ${computerMove}. ${result}`);
+    ">Rock
+    </button>
+    <button onclick="
+    const randomNumber = Math.ceil(Math.random() * 3);
+    let computerMove = '';
+    let result = '';
+     if(randomNumber === 1){
+        computerMove = 'Rock';
+          result = 'Rock' && 'You Win';
+     }else if(randomNumber === 2){
+        computerMove = 'Paper';
+         result = 'Paper' && 'It\'s a Tie ';
+     }else{
+        computerMove = 'Scissors';
+         result = 'Scissors' && 'You lose ';
+     }
+     console.log(`You picked Paper, Computer picked ${computerMove}. ${result}`);
+     ">
+      Paper
+    </button>
+    <button onclick="
+    const randomNumber = Math.ceil(Math.random() * 3);
+    let computerMove = '';
+    let result = '';
+     if(randomNumber === 1){
+        computerMove = 'Rock';
+         if(computerMove === 'Rock'){
+           result = 'You lose ';
+         }
+     }else if(randomNumber === 2){
+        computerMove = 'Paper';
+         if(computerMove === 'Paper'){
+           result = 'You Win  ';
+         }
+     }else{
+        computerMove = 'Scissors';
+        if(computerMove === 'Scissors'){
+           result = 'It\'s a Tie ';
+         }
+     }
+     console.log(`You picked Scissors, Computer picked ${computerMove}. ${result}`);
+     ">
+      Scissors
+    </button>      
+    <script>
+    </script>
+  </body>
+</html>

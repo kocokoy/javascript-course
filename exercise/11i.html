@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array and loops</title>
+      <style>
+      </style>
+  </head>
+  <body>
+    <script>
+      addNum([1,2,3], 2);
+      addNum([1,2,3], 3);
+      addNum([-2,-1,0,99], 2);
+      function addNum(array, num){
+
+        for(let i = 0; i < array.length; i++){
+          array[i]+=num;
+        }
+        return console.log(array);
+      }
+    </script>
+  </body>
+</html>

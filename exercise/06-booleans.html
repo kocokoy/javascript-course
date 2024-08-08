@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+      <style>
+    </style>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+    let computer = Math.floor(Math.random() * 4);
+    if (computer > rock) {
+      alert('Computer win');
+    } else if (computer < rock){
+      alert('You win');
+    } else {
+      alert('its a tie')
+    }>
+    Rock
+    </button>
+    <button onclick="const paper = 'Paper'; alert(paper)">
+      Paper
+    </button>
+    <button onclick="const scissors = 'Scissors'; alert(scissors)">
+      Scissors
+    </button>      
+    <script>
+      const rock = 1;
+    </script>
+  </body>
+</html>

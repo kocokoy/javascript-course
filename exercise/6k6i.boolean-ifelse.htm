@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <button onclick="console.log(`Cart quantity: ${carQuantity}`);">Show Quantity</button>
+
+    <button onclick="
+      carQuantity++
+        if(carQuantity > 10){
+          alert('cart is full');
+          carQuantity = 10;
+          console.log(carQuantity);
+        }else{
+          console.log(`Cart quantity: ${carQuantity}`);
+        }
+      ">Add to Cart</button>
+      
+    <button onclick="
+      carQuantity+=2
+        if(carQuantity > 10){
+            alert('cart is full');
+            carQuantity = 10;
+            console.log(carQuantity);
+          }else{
+            console.log(`Cart quantity: ${carQuantity}`);
+          }">+2</button>
+
+    <button onclick="
+      carQuantity+=3
+        if(carQuantity > 10){
+            alert('cart is full');
+            carQuantity = 10;
+            console.log(carQuantity);
+          }else{
+            console.log(`Cart quantity: ${carQuantity}`);
+          }
+    ">+3</button>
+
+    <button onclick="
+      carQuantity+=4
+        if(carQuantity > 10){
+            alert('cart is full');
+            carQuantity = 10;
+            console.log(carQuantity);
+          }else{
+            console.log(`Cart quantity: ${carQuantity}`);
+          }">+4</button>
+
+    <button onclick="
+    carQuantity+=5
+      if(carQuantity > 10){
+          alert('cart is full');
+          carQuantity = 10;
+          console.log(carQuantity);
+        }else{
+          console.log(`Cart quantity: ${carQuantity}`);
+        }">+5</button>
+
+    <button onclick="
+    carQuantity -= 2
+    if(carQuantity < 0){
+      alert('Not enough items in the cart');
+      carQuantity = 0;
+    }else{
+      console.log(`Cart quantity: ${carQuantity}`);
+    }">-2</button>
+
+    <button onclick="
+    carQuantity -= 3
+    if(carQuantity < 0){
+      alert('Not enough items in the cart');
+      carQuantity = 0;
+    }else{
+      console.log(`Cart quantity: ${carQuantity}`);
+    }">-3</button>
+
+    <button onclick="
+    carQuantity--
+    if(carQuantity < 0){
+      alert('Not enough items in the cart');
+      carQuantity = 0;
+    }else{
+      console.log(`Cart quantity: ${carQuantity}`);
+    }">Remove from cart</button>
+    <button onclick="console.log(`Cart quantity: ${carQuantity = 0}`);
+    console.log('Cart was reset.');"
+    >Reset Cart</button>
+    <script>
+      let carQuantity = 0;
+    </script>
+  </body>
+</html>

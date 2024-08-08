@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <script>
+      
+      let addNum = (array,num) => {
+        return array.map((value) => {
+          return value + num;
+        })
+      };
+
+      let addNum2 = (array,num) => array.map(value => value + num);
+
+      console.log(addNum([1,2,3],2));
+      console.log(addNum([-2,-1,2,99],2));
+      console.log(addNum2([1,2,3],2));
+      console.log(addNum2([-2,-1,2,99],2));
+
+      // console.log([1,2,3].map((value) => {
+      //     return value * 2;
+      //   }));
+    </script>
+  </body>
+</html>

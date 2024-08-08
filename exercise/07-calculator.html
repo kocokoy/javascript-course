@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      button{
+        border: none;
+        color: white;
+        font-size: 15px;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+      .black-btn{
+        background-color: gray;
+        opacity: 100;
+      }
+      .yellow-btn{
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Calculator</p>
+    <p>
+      <button class="black-btn" onclick="updatedCalculation('1')">1</button>
+      <button class="black-btn" onclick="updatedCalculation('2')">2</button>
+      <button class="black-btn" onclick="updatedCalculation('3')">3</button>
+      <button class="yellow-btn" onclick="updatedCalculation(' + ')">+</button>
+    </p>
+    <p>
+      <button class="black-btn" onclick="updatedCalculation('4')">4</button>
+      <button class="black-btn" onclick="updatedCalculation('5')">5</button>
+      <button class="black-btn" onclick="updatedCalculation('6')">6</button>
+      <button class="yellow-btn" onclick="updatedCalculation(' - ')">-</button>
+    </p>
+    <p>
+      <button class="black-btn" onclick="updatedCalculation('7')">7</button>
+      <button class="black-btn" onclick="updatedCalculation('8')">8</button>
+      <button class="black-btn" onclick="updatedCalculation('9')">9</button>
+      <button class="yellow-btn" onclick="updatedCalculation(' * ')">*</button>
+    </p>
+    <p>
+      <button class="black-btn" onclick="updatedCalculation('0');">0</button>
+      <button class="black-btn" onclick="updatedCalculation('.')">.</button>
+      <button class="black-btn" onclick="console.log(eval(calculation))">=</button>
+      <button class="yellow-btn" onclick="updatedCalculation(' / ')">/</button>
+    </p>
+    <p>
+      <button class="black-btn" 
+      onclick="calculation = ''; 
+      console.log('Cleared')">Clear</button>
+    </p>
+    <script>
+      let calculation = '';
+      function updatedCalculation (numbers){
+        console.log(calculation+=numbers)
+      }
+    </script>
+  </body>
+</html>

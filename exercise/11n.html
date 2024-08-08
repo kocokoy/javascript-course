@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array and loops</title>
+      <style>
+      </style>
+  </head>
+  <body>
+    <script>
+      function countWords(words){
+        const wordsObj = {
+
+        };
+
+        for(let i = 0; i < words.length; i++){
+          const word = words[i];
+
+          if(!wordsObj[word]){
+            wordsObj[word] = 1;
+          } else{
+            wordsObj[word]++;
+          }
+        }
+
+        return wordsObj;
+      }
+      // countWords(['apple','apple','banana']);
+      console.log(countWords(['apple','apple','banana']));
+    </script>
+  </body>
+</html>

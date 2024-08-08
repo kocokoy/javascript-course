@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <script>
+      let randomNumber = Math.random();
+      let result = '';
+      let guess = 'tails';
+        if(randomNumber < 0.5){
+            result = 'Heads';
+        }else{
+          result = 'tails';
+        }
+
+        if(guess != result){
+          console.log('you lose');
+        }else{
+          console.log('you win');
+        }
+      
+      
+    </script>
+  </body>
+</html>

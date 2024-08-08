@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+      <style>
+    </style>
+  </head>
+  <body>
+    <input type="text" class="js-name" onkeydown="
+     handleNameKeydown(event);
+      ">
+    <button onclick="
+      nameDisplay();
+    ">Submit</button>
+    <p class="js-nameDisplay"></p>
+    <script>
+      function handleNameKeydown(){
+        if(event.key === 'Enter'){
+          nameDisplay();
+        }
+      }
+      function nameDisplay(){
+        const nameElement = document.querySelector('.js-name');
+        let name = nameElement.value;
+        document.querySelector('.js-nameDisplay').innerHTML = `Your name is: ${name}`;
+      }
+    </script>
+  </body>
+</html>

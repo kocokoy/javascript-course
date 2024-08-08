@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10 exercise</title>
+    <style>
+      body{
+        font-family: Arial;
+      }
+      .amazon-btn{
+        background-color: rgb(255,216,20);
+        color: black;
+        border: none;
+        border-radius: 50px;
+        font-size: 20px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 45px;
+        padding-right: 45px;
+      }.uber-req{
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: bold;
+      }.uber-sched{
+        background-color: rgb(230,230,230);
+        color: black;
+        border-radius: 5px;
+        border: none;
+        padding: 13px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="amazon-btn">Add to Cart</button>
+    <button class="uber-req">Request now</button>
+    <button class="uber-sched">Schedule for later</button>
+    <button class="js-button">Test</button>
+    <button class="js-button">Test</button>
+    <script>
+      const test = document.querySelector('.js-button');
+      console.log(test.classList.contains('js-button'));
+      console.log(!test.classList.contains('js-button'));
+
+    </script>
+  </body>
+</html>
