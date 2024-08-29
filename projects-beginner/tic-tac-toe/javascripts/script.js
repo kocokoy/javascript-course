@@ -1,11 +1,13 @@
 let cell = document.querySelectorAll('.cell');
 let board = Array(9).fill(null);
 let score = document.querySelector('.js-score');
+const resetBtn = document.querySelector('.js-reset-btn');
 let playerTurns = 'X';
 let X = 0;
 let O = 0;
 
-startGame(); 
+startGame();
+resetButton();
 
 function startGame(){
 
@@ -18,7 +20,6 @@ function startGame(){
         board[i] = playerTurns
 
         const winner = checkWinner(board);
-
 
         if(winner){
           alert(`${winner} Wins`);
@@ -65,6 +66,13 @@ function checkDraw(board){
 
 }
 
+function resetButton(){
+  resetBtn.addEventListener('click',() => {
+    resetGame();
+    console.log(board);
+  });
+}
+
 function resetGame(){
   board = Array(9).fill(null);
   playerTurns = '';
@@ -76,6 +84,5 @@ function updateScore(winner){
   winner === 'O' ?  O++ : X++;
 
   return score.innerHTML = `X:${X} - O:${O}`;
-
 
 }

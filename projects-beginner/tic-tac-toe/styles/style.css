@@ -11,6 +11,23 @@ h1 {
   text-align: center;
   margin-bottom: 10px;
 }
+
+.button-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button{
+  height: 60px;
+  width: 150px;
+  font-size: 17px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 .board-and-cell{
   display: flex;
   justify-content: center;
@@ -33,3 +50,4 @@ h1 {
   font-size: 2em;
   cursor: pointer;
 }
+
