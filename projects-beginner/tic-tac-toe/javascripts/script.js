@@ -1,7 +1,6 @@
 let cell = document.querySelectorAll('.cell');
 let board = Array(9).fill(null);
 let score = document.querySelector('.js-score');
-const resetBtn = document.querySelector('.js-reset-btn');
 let playerTurns = 'X';
 let X = 0;
 let O = 0;
@@ -10,14 +9,13 @@ startGame();
 resetButton();
 
 function startGame(){
-
-  score.innerHTML = `X:${X} - O:${O}`;
-
+  scoreOutput();
   cell.forEach((cell,i) =>{
     cell.addEventListener('click',() => {
       if(board[i] === null){
         cell.innerHTML = playerTurns;
-        board[i] = playerTurns
+        board[i] = playerTurns;
+        console.log(board);
 
         const winner = checkWinner(board);
 
@@ -25,18 +23,24 @@ function startGame(){
           alert(`${winner} Wins`);
           resetGame();
           updateScore(winner);
-        }
+        };
 
         if(checkDraw(board)){
           alert(`Draw`);
           resetGame();
           
-        }
+        };
 
         playerTurns = playerTurns === 'X' ? 'O' : 'X';
       }
     })
   })
+};
+
+function removeEventListeners() {
+  cell.forEach((cell, i) => {
+    cell.removeEventListener('click', startGame); 
+  });
 }
 
 function checkWinner(checkPattern){
@@ -58,31 +62,38 @@ function checkWinner(checkPattern){
       }
     }
       return null; 
-}
+};
 
 function checkDraw(board){
 
   return board.every(cell => cell !== null);
 
-}
+};
 
 function resetButton(){
+  let resetBtn = document.querySelector('.js-reset-btn');
   resetBtn.addEventListener('click',() => {
     resetGame();
-    console.log(board);
+      O = 0;
+      X = 0;
+      playerTurns = 'X';
+        scoreOutput();
   });
-}
+};
 
 function resetGame(){
+  removeEventListeners();
   board = Array(9).fill(null);
   playerTurns = '';
   cell.forEach(cell => cell.innerHTML = '') 
-}
+};
+
+function scoreOutput(){
+  score.innerHTML = `X:${X} - O:${O}`;
+};
 
 function updateScore(winner){
+ winner === 'O' ?  O++ : X++;
+ scoreOutput();
 
-  winner === 'O' ?  O++ : X++;
-
-  return score.innerHTML = `X:${X} - O:${O}`;
-
-}
+};
