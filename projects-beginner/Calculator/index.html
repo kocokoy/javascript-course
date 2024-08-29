@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <div>
+      <p class="js-output-calculator"></p> 
+      <button onclick="getArithmetic('clear')">Clear</button>
+    </div>
+    <div>
+      <button onclick="getArithmetic('7')">7</button>
+      <button onclick="getArithmetic('8')">8</button>
+      <button onclick="getArithmetic('9')">9</button>
+      <button onclick="getArithmetic('/')">/</button>
+    </div>
+    <div>
+      <button onclick="getArithmetic('4')">4</button>
+      <button onclick="getArithmetic('5')">5</button>
+      <button onclick="getArithmetic('6')">6</button>
+      <button onclick="getArithmetic('*')">*</button>
+    </div>
+    <div>
+      <button onclick="getArithmetic('1')">1</button>
+      <button onclick="getArithmetic('2')">2</button>
+      <button onclick="getArithmetic('3')">3</button>
+      <button onclick="getArithmetic('-')">-</button>
+    </div>
+    <div>
+      <button onclick="getArithmetic('0')">0</button>
+      <button onclick="getArithmetic('.')">.</button>
+      <button onclick="getArithmetic('+')">+</button>
+      <button onclick="
+      operator = (eval(operator)); 
+      updateNumbers();
+      ">=</button>
+    </div>
+  </div>
+  <script src="./javascript/script.js"></script>
+</body>
+</html>
