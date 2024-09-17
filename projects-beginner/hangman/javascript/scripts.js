@@ -4,6 +4,7 @@ const keyboardOrder =  [
   'Z', 'X', 'C', 'V', 'B', 'N', 'M'
 ];
 let letterHolder = '';
+let testWord = 'TEST';
 
 const keyboardDiv = document.querySelector('.js-keyboard');
 const showLetter = document.querySelector('.js-showLetters');
@@ -18,14 +19,19 @@ keyboardOrder.forEach((letter,index) => {
   showLetters(index)
 })
 
-
-
 function showLetters(i){
- 
   const letterElement = document.querySelectorAll('.js-letter');
+  let word = testWord.split('');
   letterElement[i].addEventListener('click',() => {
-    letterHolder += keyboardOrder[i];
-    showLetter.innerHTML = letterHolder;
+ 
+    for(let char of word){
+      if(char === keyboardOrder[i]){
+        console.log('yes');
+        letterHolder += keyboardOrder[i];
+        showLetter.innerHTML = letterHolder;
+      }
+    }
+    
   })
 }
 
@@ -34,5 +40,9 @@ function keyboardLayOut(index){
     const br = document.createElement('br');
     keyboardDiv.appendChild(br);
   }
+}
+
+function disableLetter(letter){
+  
 }
 
