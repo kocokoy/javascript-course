@@ -7,10 +7,12 @@ const randomWords = {
   verbs: ["jump", "run", "push", "pull", "kick", "bend", "lift", "swim", "drop", "flip"],
   animals:  ["cat", "dog", "bat", "owl", "fox", "ant", "lion", "frog", "bear", "wolf"]
  };
+const hangmanDrawing = ['rope','head','body','left-arm','right-arm','left-leg','right-leg'];
 const keyboardDiv = document.querySelector('.js-keyboard');
 const titleOfWord = document.querySelector('.js-kind-of-word');
 const showLetter = document.querySelector('.guess-letter-containers');
-let life = 3;
+const parentDiv = document.querySelector('.test');
+let life = 0;
 let bool = {}; 
 startGame();
 
@@ -24,6 +26,7 @@ function startGame(){
     keyboardDiv.appendChild(button);
     keyboardLayOut(index);
     guessWordLayOut(guessWord);
+    console.log(guessWord);
     showLetters(index,guessWord);
   })
 };
@@ -93,6 +96,8 @@ function showLetters(i,guessWord){
 
 function checkForWin() {
   const allCorrect = Object.values(bool).every(value => value === true);
+  console.log(allCorrect);
+  console.log(bool)
   if (allCorrect) {
     console.log("You win!");  
     alert("You win!");  
@@ -103,20 +108,36 @@ function checkForWin() {
 function checkForLose(tries){
   const test = tries.every(value => value === false);
   if(test){
-    life--;
-    if(life > 0){
-      console.log("You're Wrong!");  
-      alert(`You're Wrong, you only have ${life} tries`);
-    }else if(life === 0){
-      alert(`You're Wrong, You Lose!`);
-      startGame();
+    drawHangMang(life);
+    life++;
+  if(life === 7){
+    drawHangMang(life);
+    setTimeout(() => {
+      alert(`You Lose!`);
+      resetGame();
+    }, 100);
+    
     }
   }
 }
 
 function resetGame(){
-  life = 3;
+  parentDiv.innerHTML = '';
+  life = 0;
+  bool = {};
   startGame();
+}
+
+function drawHangMang(life){
+  const newDiv = document.createElement('div');
+  hangmanDrawing.forEach((draw,index) => {
+    if(index === life){
+      newDiv.className = draw;
+      console.log(life);
+      console.log(index);
+    }
+  })
+  parentDiv.appendChild(newDiv);
 }
 
 
